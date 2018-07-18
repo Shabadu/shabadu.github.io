@@ -1,0 +1,41 @@
+<html>
+<head>
+</head>
+<body>
+	<p>This is the standard git branching and merging model.  Please note that while this is the standard, variations or alterations may be called for in certain projects.  If alterations are made, those alterations should be fully documented in the project's documentation and communicated to both the client and to the entire project team.</p>
+	<h3>Initialization</h3>
+	<ul>
+		<li>A new repository is created with a master branch.  A stage branch is then created from master.  These are the only two lasting branches.</li>
+		<li>One Issue per branch</li>
+		<li>All commit messages must contain the issue number.  This allows us to track work and will automatically associate a work item to a commit.</li>
+	</ul>
+	<h3>Master Branch</h3>
+	<ul>
+		<li>The <i>master</i> branch should reflect currently "released" code.  </li>
+		<li>It should be locked down with write privileges being given solely to the project's designated architect, lead developer and build master.</li>
+		<li>The master branch is updated by a merge from the stage branch when preparing for a release.</li>
+		<li>The branch should be tagged when a release is performed [release].[sprint].[hotfix].<ul><li>Example: 0.6.1</li></ul></li>
+	</ul>
+	<h3>Stage Branch</h3>
+	<ul>
+		<li>As each feature passes QA, the entire feature branch will be merged into the stage branch.</li>
+		<li>The pull request to stage should be opened by a lead or build master with the original developer added as a reviewer to validate all of the changes.</li>
+	</ul>
+	<h3>Sprint Branch</h3>
+	<ul>
+		<li>Sprint branches are created from stage at the beginning of each sprint to provide a baseline branch for sprint work.</li>
+		<li>Name the sprint branch with the sprint number.<ul><li>Example: sprints/sprint-2</li></ul></li>
+	</ul>
+	<h3>Develop Branch</h3>
+	<ul>
+		<li>A new develop branch is created at the start of each sprint at the same time as the sprint branch.</li>
+		<li>As tickets are completed, pull requests are created to merge code into the develop branch for QA.</li>
+	</ul>
+	<h3>Feature Branches</h3>
+	<ul>
+		<li>Created off the baseline sprint branch</li>
+		<li>Name with issue number and in the features folder</li>
+		<li>If one feature branch depends on another, branch from them. <strong>Never branch from develop</strong></li>
+	</ul>
+</body>
+</html>
