@@ -37,5 +37,22 @@
 		<li>Name with issue number and in the features folder</li>
 		<li>If one feature branch depends on another, branch from them. <strong>Never branch from develop</strong></li>
 	</ul>
+	<h3>Hot Fix</h3>
+	<ul>
+		<li>In the event of a production hot fix, branch from master into a hot fix branch</li>
+		<li>Follow release versioning for branch naming [release].[sprint].[hotfix].</li>
+		<li>Once released hot fix will be merged back to master, stage, develop and sprint branches.</li>
+	</ul>
+	<h3>Merge Conflicts</h3>
+	<ul>
+		<li>You should never syncronize branches once work has started.<ul><li>For example prior to submitting a pull request for a feature branch into develop, DO NOT pull develop into the feature branch first.  This has the potential to pollute your feature branch with changes from other features.</li></ul></li>
+		<li>In the event of a merge conflict
+			<ul>
+				<li>Make a new branch. Example: merge/SH-146</li>
+				<li>Resolve conflicts on the fix branch and submit a pull request from there.</li>
+				<li>Manually copy changes in the fix branch to your feature branch or they will be lost.</li>
+			</ul>
+		</li>
+	</ul>
 </body>
 </html>
